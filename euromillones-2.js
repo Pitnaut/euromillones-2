@@ -5,13 +5,13 @@ const randomNumber = (minRange, maxRange) => {
 
 //console.log(randomNumber(1, 50))
 
-let getLottoNumbers = [];
+let lottoNumbers = [];
 let i = 0;
-// numbers added in lottoNumbers array
+// numbers added in order in lottoNumbers array
 do {
     i = randomNumber(1, 50);
-    getLottoNumbers.push(i);
-} while (getLottoNumbers.length < 5);
+    lottoNumbers.push(i);
+    lottoNumbers.sort(function(a, b) {return a - b})
+} while (lottoNumbers.length < 5);
 
-
-console.log(getLottoNumbers)
+console.log(lottoNumbers)
