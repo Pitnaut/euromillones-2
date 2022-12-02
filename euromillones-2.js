@@ -4,26 +4,19 @@ const randomNumber = (minRange, maxRange) => {
 };
 
 // numbers added in order in lottoNumbers array
-let lottoNumbers = [];
-let i = 0;
+let nsNumbers = new Set()
 
-do {
-    i = randomNumber(1, 50);
-    lottoNumbers.push(i);
-    lottoNumbers.sort(function(a, b) {return a - b});
-} while (lottoNumbers.length < 5);
+while (nsNumbers.size < 5)
+    nsNumbers.add(randomNumber(1, 50))
+let lottoNumbers = [...nsNumbers].sort((a, b) => a - b)
 
 //numbers added in order in starNumbers array
-let starNumbers = []
-let j = 0;
+let nsStars = new Set()
 
-do {
-    j = randomNumber(1, 12);
-    starNumbers.push(j);
-    starNumbers.sort(function(a, b) {return a - b});
-} while (starNumbers.length < 2);
-
+while (nsStars.size < 2)
+    nsStars.add(randomNumber(1, 12))
+let starsNumbers = [...nsStars].sort((a, b) => a - b)
 
 
 console.log(lottoNumbers)
-console.log(starNumbers)
+console.log(starsNumbers)
