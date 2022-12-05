@@ -8,14 +8,19 @@ let nsNumbers = new Set()
 
 while (nsNumbers.size < 5)
     nsNumbers.add(randomNumber(1, 50))
-let lottoNumbers = [...nsNumbers].sort((a, b) => a - b)
+let getLottoNumbers = [...nsNumbers].sort((a, b) => a - b)
+
+let lottoNumbers = getLottoNumbers.join(', ')
+
 
 //numbers added in order in starNumbers array
 let nsStars = new Set()
 
 while (nsStars.size < 2)
     nsStars.add(randomNumber(1, 12))
-let starsNumbers = [...nsStars].sort((a, b) => a - b)
+let getStarsNumbers = [...nsStars].sort((a, b) => a - b)
+
+let starsNumbers = getStarsNumbers.join(', ')
 
 
 
