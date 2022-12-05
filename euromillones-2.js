@@ -31,7 +31,7 @@ if(sumTotalLotto <= 80) {
 } else if (sumTotalLotto >= 190) {
     randomSentence = 'Oh! Look at these big numbers! You are not gonna win this time.'
 } else {
-    randomSentence = 'Numbers perfectly balance. Enjoy your money... nah probably not.'
+    randomSentence = 'Numbers perfectly balanced. Enjoy your money... nah probably not.'
 }
 
 console.log(sumTotalLotto)
