@@ -18,5 +18,19 @@ while (nsStars.size < 2)
 let starsNumbers = [...nsStars].sort((a, b) => a - b)
 
 
-console.log(lottoNumbers)
-console.log(starsNumbers)
+
+/* const motSent = () => {
+    if (starsNumbers.includes(7)) {
+        console.log ("Good luck number, don't buy more tickets")
+    } else {
+        console.log("Buy another one")
+    }
+}*/
+
+ let yourName = 'Pit'   
+
+ const yourLottoTicket = () => {
+    console.log(`Hello ${yourName}, here is your lotto numbers: ${lottoNumbers}. Your stars are: ${starsNumbers}. ¡Good luck!`)
+ }
+ 
+ yourLottoTicket()
