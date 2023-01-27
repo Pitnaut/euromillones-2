@@ -39,7 +39,23 @@ console.log(sumTotalLotto)
  let yourName = 'Laura';   
 
  const yourLottoTicket = () => {
-    console.log(`Hello ${yourName}, here is your lotto numbers: ${lottoNumbers}. Your stars are: ${starsNumbers}. ${randomSentence}`)
+   return `Hello ${yourName}, here is your lotto numbers: ${lottoNumbers}. Your stars are: ${starsNumbers}. ${randomSentence}`
  }
  
- yourLottoTicket()
+yourLottoTicket();
+
+//DOM elements
+
+let button = document.getElementById('button')
+let numbersInWeb = yourLottoTicket();
+const showNumbers = () => {
+    document.getElementById('your-numbers').innerHTML = numbersInWeb;
+}
+
+button.addEventListener('click', showNumbers);
+
+
+ 
+
+ 
+ 
