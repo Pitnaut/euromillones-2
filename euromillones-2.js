@@ -26,20 +26,19 @@ let starsNumbers = getStarsNumbers.join(', ');
 let sumTotalLotto = getLottoNumbers.reduce((a,b) => a + b, 0);
 
 let randomSentence = ''
-if(sumTotalLotto <= 80) {
+if(sumTotalLotto <= 100) {
     randomSentence = 'These numbers are very small. Maybe you should buy another ticket.'
-} else if (sumTotalLotto >= 190) {
+} else if (sumTotalLotto >= 160) {
     randomSentence = 'Oh! Look at these big numbers! You are not gonna win this time.'
 } else {
     randomSentence = 'Numbers perfectly balanced. Enjoy your money... nah probably not.'
 }
 
 console.log(sumTotalLotto)
-
- let yourName = 'Laura';   
+   
 
  const yourLottoTicket = () => {
-   return `Hello ${yourName}, here is your lotto numbers: ${lottoNumbers}. Your stars are: ${starsNumbers}. ${randomSentence}`
+   return `Hello, these are your lotto numbers: ${lottoNumbers}. Your stars are: ${starsNumbers}. ${randomSentence}`
  }
  
 yourLottoTicket();
@@ -48,11 +47,19 @@ yourLottoTicket();
 
 let button = document.getElementById('button')
 let numbersInWeb = yourLottoTicket();
+let tryAgain = document.getElementById('try-again')
+
 const showNumbers = () => {
     document.getElementById('your-numbers').innerHTML = numbersInWeb;
+    tryAgain.style.display = 'block';
+}
+
+const resetNumbers = () => {
+    location.reload();
 }
 
 button.addEventListener('click', showNumbers);
+tryAgain.addEventListener('click', resetNumbers);
 
 
  
